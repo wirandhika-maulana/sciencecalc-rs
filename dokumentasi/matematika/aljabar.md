@@ -23,10 +23,10 @@ Penyelesaiannya menggunakan rumus:
 #### Implementasi dalam Kode
 
 ```rust
-use sciencecalc_rs::matematika::Aljabar;
+use sciencecalc_rs::matematika::aljabar;
 
 fn main() {
-    let x = Aljabar::splsv(6.0, 12.0);  // x = -b / a
+    let x = aljabar::splsv(6.0, 12.0);  // x = -b / a
     println!("{}", x.unwrap());
     // x = -12 / 6 = -2
 }
@@ -71,10 +71,10 @@ Penyelesaiannya menggunakan metode determinan:
 #### Implementasi dalam Kode
 
 ```rust
-use sciencecalc_rs::matematika::Aljabar;
+use sciencecalc_rs::matematika::aljabar;
 
 fn main() {
-    let hasil = Aljabar::spldv(
+    let hasil = aljabar::spldv(
         4.0, -3.0, 18.0,  // Persamaan 1: 4x - 3y = 18
         3.0, 1.0, 7.0     // Persamaan 2: 3x + 1y = 7
     );
@@ -133,10 +133,10 @@ Penyelesaiannya menggunakan metode determinan:
 #### Implementasi dalam Kode
 
 ```rust
-use sciencecalc_rs::matematika::Aljabar;
+use sciencecalc_rs::matematika::aljabar;
 
 fn main() {
-    let hasil = Aljabar::spltv(
+    let hasil = aljabar::spltv(
         2.0, -1.0, 3.0, 9.0,    // Persamaan 1
         1.0, 1.0, -2.0, -2.0,   // Persamaan 2
         3.0, -2.0, 4.0, 15.0    // Persamaan 3
@@ -200,19 +200,19 @@ Output:
 ### Faktorial
 
 ```rust
-let hasil = Aljabar::factorial(5); // Output: 120
+let hasil = aljabar::factorial(5); // Output: 120
 ```
 
 ### Kombinasi
 
 ```rust
-let hasil = Aljabar::combination(5, 2); // Output: 10
+let hasil = aljabar::combination(5, 2); // Output: 10
 ```
 
 ### Permutasi
 
 ```rust
-let hasil = Aljabar::permutation(5, 2); // Output: 20
+let hasil = aljabar::permutation(5, 2); // Output: 20
 ```
 
 ---
@@ -241,10 +241,10 @@ Penyelesaiannya menggunakan rumus diskriminan:
 #### Implementasi dalam Kode
 
 ```rust
-use sciencecalc_rs::matematika::Aljabar;
+use sciencecalc_rs::matematika::aljabar;
 
 fn main() {
-    let akar = Aljabar::quadratic(1.0, -3.0, 2.0);
+    let akar = aljabar::quadratic(1.0, -3.0, 2.0);
     println!("{:?}", akar.unwrap());
     // Output: (2.0, 1.0)
 }
@@ -286,10 +286,10 @@ Determinannya: `ad - bc`
 #### Implementasi dalam Kode
 
 ```rust
-use sciencecalc_rs::matematika::Aljabar;
+use sciencecalc_rs::matematika::aljabar;
 
 fn main() {
-    let det = Aljabar::determinant_2x2(2.0, 3.0, 1.0, 4.0);
+    let det = aljabar::determinant_2x2(2.0, 3.0, 1.0, 4.0);
     println!("{}", det); // Output: 5.0
 }
 ```
@@ -307,12 +307,12 @@ multiply_2x2(m1: [[f64; 2]; 2], m2: [[f64; 2]; 2]) -> [[f64; 2]; 2]
 #### Implementasi dalam Kode
 
 ```rust
-use sciencecalc_rs::matematika::Aljabar;
+use sciencecalc_rs::matematika::aljabar;
 
 fn main() {
     let a = [[1.0, 2.0], [3.0, 4.0]];
     let b = [[2.0, 0.0], [1.0, 2.0]];
-    let hasil = Aljabar::multiply_2x2(a, b);
+    let hasil = aljabar::multiply_2x2(a, b);
     println!("{:?}", hasil); // Output: [[4.0, 4.0], [10.0, 8.0]]
 }
 ```
@@ -330,10 +330,10 @@ inverse_2x2(a: f64, b: f64, c: f64, d: f64) -> Option<[[f64; 2]; 2]>
 #### Implementasi dalam Kode
 
 ```rust
-use sciencecalc_rs::matematika::Aljabar;
+use sciencecalc_rs::matematika::aljabar;
 
 fn main() {
-    let invers = Aljabar::inverse_2x2(2.0, 1.0, 1.0, 2.0).unwrap();
+    let invers = aljabar::inverse_2x2(2.0, 1.0, 1.0, 2.0).unwrap();
     println!("{:?}", invers);
     // Output: [[0.666..., -0.333...], [-0.333..., 0.666...]]
 }
@@ -352,7 +352,7 @@ determinant_3x3(m: [[f64; 3]; 3]) -> f64
 #### Implementasi dalam Kode
 
 ```rust
-use sciencecalc_rs::matematika::Aljabar;
+use sciencecalc_rs::matematika::aljabar;
 
 fn main() {
     let m = [
@@ -360,7 +360,7 @@ fn main() {
         [0.0, 4.0, 5.0],
         [1.0, 0.0, 6.0]
     ];
-    let det = Aljabar::determinant_3x3(m);
+    let det = aljabar::determinant_3x3(m);
     println!("{}", det); // Output: 22.0
 }
 ```
@@ -378,7 +378,7 @@ multiply_3x3(a: [[f64; 3]; 3], b: [[f64; 3]; 3]) -> [[f64; 3]; 3]
 #### Implementasi dalam Kode
 
 ```rust
-use sciencecalc_rs::matematika::Aljabar;
+use sciencecalc_rs::matematika::aljabar;
 
 fn main() {
     let a = [
@@ -391,7 +391,7 @@ fn main() {
         [6.0, 5.0, 4.0],
         [3.0, 2.0, 1.0]
     ];
-    let hasil = Aljabar::multiply_3x3(a, b);
+    let hasil = aljabar::multiply_3x3(a, b);
     println!("{:?}", hasil);
 }
 ```
@@ -409,7 +409,7 @@ inverse_3x3(m: [[f64; 3]; 3]) -> Option<[[f64; 3]; 3]>
 #### Implementasi dalam Kode
 
 ```rust
-use sciencecalc_rs::matematika::Aljabar;
+use sciencecalc_rs::matematika::aljabar;
 
 fn main() {
     let m = [
@@ -417,7 +417,7 @@ fn main() {
         [1.0, 3.0, 2.0],
         [1.0, 0.0, 0.0]
     ];
-    let invers = Aljabar::inverse_3x3(m).unwrap();
+    let invers = aljabar::inverse_3x3(m).unwrap();
     println!("{:?}", invers);
 }
 ```

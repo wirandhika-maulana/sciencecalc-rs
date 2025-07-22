@@ -1,6 +1,6 @@
 # Gaya
 
-Modul [`gaya.rs`](../src/math/gaya.rs) pada pustaka **sciencecalc-rs** menyediakan fungsi untuk menghitung **gaya** berdasarkan massa dan percepatan.
+Modul [`gaya.rs`](../src/fisika/gaya.rs) pada pustaka **sciencecalc-rs** menyediakan fungsi untuk menghitung **gaya** berdasarkan massa dan percepatan.
 
 ---
 

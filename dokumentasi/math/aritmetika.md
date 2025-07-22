@@ -25,7 +25,7 @@ sciencecalc-rs = "<VersiCrate>"
 Impor modul aritmetika:
 
 ```rust
-use sciencecalc_rs::math::aritmetika::*;
+use sciencecalc_rs::matematika::aritmetika::*;
 ```
 
 ---

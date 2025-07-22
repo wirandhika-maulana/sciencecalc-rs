@@ -217,6 +217,15 @@ impl Aljabar {
             [ -c/det, a/det ],
         ])
     }
+
+    /// Transpose matriks 2x2 / 2x2 matrix transpose
+pub fn transpose_2x2(m: [[f64; 2]; 2]) -> [[f64; 2]; 2] {
+    [
+        [m[0][0], m[1][0]],
+        [m[0][1], m[1][1]],
+    ]
+}
+    
 // ==================
 // Matriks 3x3 dan Transpose / 3x3 Matrix and Transpose
 // ==================
@@ -226,14 +235,6 @@ pub fn determinant_3x3(m: [[f64; 3]; 3]) -> f64 {
     m[0][0] * (m[1][1]*m[2][2] - m[1][2]*m[2][1]) -
     m[0][1] * (m[1][0]*m[2][2] - m[1][2]*m[2][0]) +
     m[0][2] * (m[1][0]*m[2][1] - m[1][1]*m[2][0])
-}
-
-/// Transpose matriks 2x2 / 2x2 matrix transpose
-pub fn transpose_2x2(m: [[f64; 2]; 2]) -> [[f64; 2]; 2] {
-    [
-        [m[0][0], m[1][0]],
-        [m[0][1], m[1][1]],
-    ]
 }
 
 /// Transpose matriks 3x3 / 3x3 matrix transpose

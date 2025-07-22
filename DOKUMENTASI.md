@@ -7,7 +7,6 @@
 - [Modul Matematika](#modul-matematika)
 - [Modul Fisika](#modul-fisika)
 - [Modul Kimia](#modul-kimia)
-- [Konversi Sistem Bilangan](#konversi-sistem-bilangan)
 - [Contoh Penggunaan](#contoh-penggunaan)
 - [Kontribusi](#kontribusi)
 - [Lisensi](#lisensi)
@@ -64,19 +63,6 @@ let gaya = force::calculate_force(10.0, 9.8); // Output: 98.0
 ```rust
 use sciencecalc_rs::chemistry::stoichiometry;
 let mol = stoichiometry::calculate_moles(18.0, 18.0); // Output: 1.0
-```
-
----
-
-## Konversi Sistem Bilangan
-
-### Modul
-- `math/basis.rs` — Konversi desimal, biner, oktal, heksadesimal.
-
-### Contoh Fungsi
-```rust
-use sciencecalc_rs::math::basis;
-let biner = basis::desimal_ke_biner(25); // Output: "11001"
 ```
 
 ---

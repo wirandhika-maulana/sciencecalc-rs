@@ -2,9 +2,9 @@
 /// Fitur: Faktorial, Kombinasi, Permutasi, Sistem Persamaan Linear, Kuadrat, Matriks
 /// Features: Factorial, Combination, Permutation, Linear & Quadratic System, Matrix Operations
 
-pub struct Aljabar;
+pub struct aljabar;
 
-impl Aljabar {
+impl aljabar {
     // ==================
     // Kombinatorika Dasar / Basic Combinatorics
     // ==================

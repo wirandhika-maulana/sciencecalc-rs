@@ -1,10 +1,10 @@
 # sciencecalc-rs
 
-`sciencecalc-rs` adalah pustaka (crate) Rust yang menyediakan berbagai fungsi kalkulasi ilmiah (matematika, fisika, dan kimia) dengan antarmuka yang mudah digunakan.
+`sciencecalc-rs` adalah pustaka (crate) Rust yang menyediakan berbagai fungsi kalkulasi ilmiah — matematika, fisika, dan kimia — dengan antarmuka yang mudah digunakan.
 
 ## Instalasi
 
-Tambahkan pustaka ini ke dalam proyek Cargo Anda dengan perintah berikut:
+Tambahkan pustaka ini ke proyek Cargo Anda dengan perintah:
 
 ```sh
 cargo add sciencecalc-rs
@@ -18,78 +18,77 @@ sciencecalc-rs = "<Versi Crates>"
 
 ## Penggunaan
 
-Untuk menggunakan pustaka ini, import terlebih dahulu `sciencecalc-rs` ke dalam kode Anda:
+Import pustaka dan modul sesuai kebutuhan:
 
 ```rust
-use sciencecalc_rs;
+use sciencecalc_rs::matematika;
+use sciencecalc_rs::fisika;
+use sciencecalc_rs::kimia;
 
 fn main() {
     // Implementasi kode di sini
 }
 ```
 
-Untuk mengakses metode yang tersedia, panggil pustaka diikuti dengan modul yang bersangkutan:
+Untuk mengakses fungsi-fungsi kalkulasi, panggil dengan namespace modul yang bersangkutan:
 
 ```rust
-use sciencecalc_rs::math::algebra;      // Modul matematika
-use sciencecalc_rs::physics::force;     // Modul fisika
-use sciencecalc_rs::chemistry::stoichiometry; // Modul kimia
+use sciencecalc_rs::matematika::aritmetika;
+use sciencecalc_rs::fisika::gaya;
+use sciencecalc_rs::kimia::stoikiometri;
 ```
 
 ### Contoh Penggunaan
 
-#### 1. Faktorial dan Persamaan Linear
+#### 1. Matematika: Linear 1x1
 
 ```rust
-use sciencecalc_rs::math::algebra;
-use sciencecalc_rs::math::linear;
+use sciencecalc_rs::matematika::aljabar;
+use sciencecalc_rs::matematika::linear;
 
 fn main() {
-    let faktorial = algebra::factorial(5);
-    let solusi_linear = linear::solve_linear_1x1(2.0, 3.0, 11.0);
-    println!("Factorial 5: {}", faktorial);
+    let solusi_linear = linear::persamaan_linear_1x1(2.0, 3.0, 11.0);
     println!("Linear 1x1 (2x + 3 = 11): {:?}", solusi_linear);
 }
 ```
 
 **Output:**
 ```sh
-Factorial 5: 120
 Linear 1x1 (2x + 3 = 11): Some(4.0)
 ```
 
-#### 2. Kalkulasi Fisika: Gaya
+#### 2. Fisika: Gaya
 
 ```rust
-use sciencecalc_rs::physics::force;
+use sciencecalc_rs::fisika::gaya;
 
 fn main() {
     let m = 10.0;
     let a = 9.8;
-    let gaya = force::calculate_force(m, a);
-    println!("Force (m=10, a=9.8): {}", gaya);
+    let gaya = gaya::gaya(m, a);
+    println!("Gaya (m=10, a=9.8): {}", gaya);
 }
 ```
 **Output:**
 ```sh
-Force (m=10, a=9.8): 98
+Gaya (m=10, a=9.8): 98
 ```
 
-#### 3. Kalkulasi Kimia: Mol
+#### 3. Kimia: Jumlah Mol
 
 ```rust
-use sciencecalc_rs::chemistry::stoichiometry;
+use sciencecalc_rs::kimia::stoikiometri;
 
 fn main() {
-    let mass = 18.0;
-    let molar_mass = 18.0;
-    let mol = stoichiometry::calculate_moles(mass, molar_mass);
-    println!("Moles (mass=18g, molar mass=18g/mol): {}", mol);
+    let massa = 18.0;
+    let massa_molar = 18.0;
+    let mol = stoikiometri::jumlah_mol(massa, massa_molar);
+    println!("Jumlah mol (massa=18g, massa molar=18g/mol): {}", mol);
 }
 ```
 **Output:**
 ```sh
-Moles (mass=18g, molar mass=18g/mol): 1
+Jumlah mol (massa=18g, massa molar=18g/mol): 1
 ```
 
 ## Fitur
@@ -100,7 +99,7 @@ Moles (mass=18g, molar mass=18g/mol): 1
 <ul>
   <li>Operasi aritmetika dasar: tambah, kurang, kali, bagi, faktorial, pangkat, akar.</li>
   <li>Operasi trigonometri: sinus, cosinus, tangen, dan invers.</li>
-  <li>Statistik dasar: rata-rata, median, modus, deviasi standar.</li>
+  <li>Statistika dasar: rata-rata, median, modus, deviasi standar.</li>
   <li>Persamaan dan sistem persamaan linear.</li>
   <li>Operasi matriks: penjumlahan, perkalian, invers, determinan.</li>
 </ul>
@@ -110,7 +109,7 @@ Moles (mass=18g, molar mass=18g/mol): 1
 <summary><strong>Fisika</strong></summary>
 
 <ul>
-  <li>Kalkulasi gaya, energi, dan gerak.</li>
+  <li>Kalkulasi gaya, energi, gerak, dan listrik.</li>
   <li>Perhitungan hukum Newton.</li>
   <li>Konversi satuan fisika.</li>
   <li>Kalkulasi kelistrikan (arus, tegangan, hambatan).</li>
@@ -123,20 +122,20 @@ Moles (mass=18g, molar mass=18g/mol): 1
 <ul>
   <li>Perhitungan mol dan massa molar.</li>
   <li>Stoikiometri reaksi kimia.</li>
-  <li>Kalkulasi larutan: konsentrasi, molaritas.</li>
+  <li>Kalkulasi larutan: konsentrasi, molaritas, pH.</li>
   <li>Hukum gas ideal.</li>
 </ul>
 </details>
 
 ## Dokumentasi Lengkap
 
-Dokumentasi lengkap pustaka ini dapat diakses melalui tautan berikut:  
+Dokumentasi lengkap pustaka ini dapat diakses di:  
 [Dokumentasi sciencecalc-rs](https://github.com/wirandhika-maulana/sciencecalc-rs/blob/master/DOKUMENTASI.md)
 
 ## Status Pengembangan
 
-Pustaka ini masih dalam tahap pengembangan aktif, sehingga mungkin terdapat bug atau keterbatasan dalam fungsionalitasnya.  
-Pengguna diharapkan untuk memberikan masukan dan kontribusi guna meningkatkan kualitas pustaka ini.
+Pustaka ini masih dalam tahap pengembangan aktif, sehingga mungkin terdapat bug atau keterbatasan.  
+Kontribusi dan masukan sangat diharapkan untuk meningkatkan kualitas pustaka ini.
 
 Selamat mencoba!
 
@@ -144,7 +143,7 @@ Selamat mencoba!
 
 > [!WARNING]
 >
-> REPOSITORY INI SERING DAN SELALU MENDAPATKAN UPDATE.
+> REPOSITORI INI SERING DAN SELALU MENDAPATKAN UPDATE.
 >
 > KESTABILAN DI DALAM *BRANCH* [`master`](https://github.com/wirandhika-maulana/sciencecalc-rs/tree/master) TIDAK DAPAT DIPASTIKAN!
 

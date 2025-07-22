@@ -26,7 +26,7 @@ Penyelesaiannya menggunakan rumus:
 use sciencecalc_rs::matematika::aljabar::*;
 
 fn main() {
-    let x = splsv(6.0, 12.0);  // x = -b / a
+    let x = Aljabar::splsv(6.0, 12.0);  // x = -b / a
     println!("{}", x.unwrap());
     // x = -12 / 6 = -2
 }

@@ -18,7 +18,7 @@ Modul [`larutan.rs`](../src/kimia/larutan.rs) pada pustaka **sciencecalc-rs** me
 ### 1. Menghitung Molaritas
 
 ```rust
-use sciencecalc_rs::math::larutan::molaritas;
+use sciencecalc_rs::kimia::larutan::molaritas;
 
 fn main() {
     let jumlah_mol = 0.5;      // mol
@@ -33,7 +33,7 @@ fn main() {
 ### 2. Menghitung pH Larutan Asam Kuat
 
 ```rust
-use sciencecalc_rs::math::larutan::ph_asam_kuat;
+use sciencecalc_rs::kimia::larutan::ph_asam_kuat;
 
 fn main() {
     let konsentrasi_h = 0.01;  // mol/L

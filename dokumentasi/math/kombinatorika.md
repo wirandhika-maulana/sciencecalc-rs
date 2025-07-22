@@ -1,6 +1,6 @@
 # Kombinatorika
 
-Dokumentasi modul [`kombinatorika.rs`](../src/math/kombinatorika.rs) pada pustaka **sciencecalc-rs**.
+Dokumentasi modul [`kombinatorika.rs`](../src/matematika/kombinatorika.rs) pada pustaka **sciencecalc-rs**.
 
 ---
 
@@ -18,7 +18,7 @@ Fungsi dasar untuk menghitung **faktorial**, **kombinasi**, dan **permutasi**.
 
 **Contoh:**
 ```rust
-use sciencecalc_rs::math::kombinatorika::{faktorial, kombinasi, permutasi};
+use sciencecalc_rs::matematika::kombinatorika::{faktorial, kombinasi, permutasi};
 
 fn main() {
     let n = 5;
@@ -57,7 +57,7 @@ Mewakili dadu standar (angka 1-6) dan peluangnya.
 
 **Contoh:**
 ```rust
-use sciencecalc_rs::math::kombinatorika::Peluang::Dadu;
+use sciencecalc_rs::matematika::kombinatorika::Peluang::Dadu;
 
 fn main() {
     let dadu = Dadu::new();
@@ -83,7 +83,7 @@ Mewakili koin dua sisi (Angka = 'A', Gambar = 'G').
 
 **Contoh:**
 ```rust
-use sciencecalc_rs::math::kombinatorika::Peluang::Koin;
+use sciencecalc_rs::matematika::kombinatorika::Peluang::Koin;
 
 fn main() {
     let koin = Koin::new();
@@ -107,7 +107,7 @@ Mewakili kantong kelereng dengan dua warna (Merah = 'M', Putih = 'P').
 
 **Contoh:**
 ```rust
-use sciencecalc_rs::math::kombinatorika::Peluang::KantongKelereng;
+use sciencecalc_rs::matematika::kombinatorika::Peluang::KantongKelereng;
 
 fn main() {
     let kantong = KantongKelereng::new(5, 7);

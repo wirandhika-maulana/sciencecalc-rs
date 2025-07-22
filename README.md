@@ -33,7 +33,7 @@ fn main() {
 Untuk mengakses fungsi-fungsi kalkulasi, panggil dengan namespace modul yang bersangkutan:
 
 ```rust
-use sciencecalc_rs::matematika::aritmetika;
+use sciencecalc_rs::matematika::aljabar;
 use sciencecalc_rs::fisika::gaya;
 use sciencecalc_rs::kimia::stoikiometri;
 ```

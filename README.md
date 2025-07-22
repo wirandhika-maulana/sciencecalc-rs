@@ -40,21 +40,21 @@ use sciencecalc_rs::kimia::stoikiometri;
 
 ### Contoh Penggunaan
 
-#### 1. Matematika: Linear 1x1
+#### 1. Matematika: Sistem Persamaan Linear Satu Variabel (SPLSV)
 
 ```rust
 use sciencecalc_rs::matematika::aljabar;
-use sciencecalc_rs::matematika::linear;
 
 fn main() {
-    let solusi_linear = linear::persamaan_linear_1x1(2.0, 3.0, 11.0);
-    println!("Linear 1x1 (2x + 3 = 11): {:?}", solusi_linear);
+    // SPLSV: ax + b = 0
+    let solusi = aljabar::splsv(2.0, 3.0);
+    println!("Solusi SPLSV (2x + 3 = 0): {:?}", solusi);
 }
 ```
 
 **Output:**
 ```sh
-Linear 1x1 (2x + 3 = 11): Some(4.0)
+Solusi SPLSV (2x + 3 = 0): Some(-1.5)
 ```
 
 #### 2. Fisika: Gaya

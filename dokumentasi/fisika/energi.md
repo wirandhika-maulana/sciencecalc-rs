@@ -18,7 +18,7 @@ Modul [`energi.rs`](../src/fisika/energi.rs) pada pustaka **sciencecalc-rs** men
 ### Energi Kinetik
 
 ```rust
-use sciencecalc_rs::math::energi::energi_kinetik;
+use sciencecalc_rs::fisika::energi::energi_kinetik;
 
 fn main() {
     let massa = 2.0;    // kg
@@ -33,7 +33,7 @@ fn main() {
 ### Energi Potensial
 
 ```rust
-use sciencecalc_rs::math::energi::energi_potensial;
+use sciencecalc_rs::fisika::energi::energi_potensial;
 
 fn main() {
     let massa = 2.0;     // kg

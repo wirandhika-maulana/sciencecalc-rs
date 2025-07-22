@@ -15,7 +15,7 @@ Modul [`gas.rs`](../src/kimia/gas.rs) pada pustaka **sciencecalc-rs** menyediaka
 ## 📍 Penjelasan & Contoh Penggunaan
 
 ```rust
-use sciencecalc_rs::math::gas::tekanan_gas_ideal;
+use sciencecalc_rs::kimia::gas::tekanan_gas_ideal;
 
 fn main() {
     let n = 2.0;       // mol

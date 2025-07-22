@@ -1,6 +1,6 @@
 # Trigonometri
 
-Modul [`trigonometri.rs`](../src/math/trigonometri.rs) pada pustaka **sciencecalc-rs** menyediakan fungsi-fungsi trigonometri dasar, konversi sudut, dan hukum trigonometri.
+Modul [`trigonometri.rs`](../src/matematika/trigonometri.rs) pada pustaka **sciencecalc-rs** menyediakan fungsi-fungsi trigonometri dasar, konversi sudut, dan hukum trigonometri.
 
 ---
 
@@ -31,7 +31,7 @@ Seluruh fungsi diakses melalui struktur `Trigonometri`.
 
 ### 1. Konversi Sudut
 ```rust
-use sciencecalc_rs::math::trigonometri::Trigonometri;
+use sciencecalc_rs::matematika::trigonometri::Trigonometri;
 
 fn main() {
     let rad = Trigonometri::deg_to_rad(180.0);
@@ -45,7 +45,7 @@ fn main() {
 
 ### 2. Fungsi Dasar Trigonometri
 ```rust
-use sciencecalc_rs::math::trigonometri::Trigonometri;
+use sciencecalc_rs::matematika::trigonometri::Trigonometri;
 
 fn main() {
     println!("sin(30) = {:.2}", Trigonometri::sin(30.0)); // Output: sin(30) = 0.50
@@ -58,7 +58,7 @@ fn main() {
 
 ### 3. Fungsi Turunan (csc, sec, cot)
 ```rust
-use sciencecalc_rs::math::trigonometri::Trigonometri;
+use sciencecalc_rs::matematika::trigonometri::Trigonometri;
 
 fn main() {
     println!("csc(30) = {:?}", Trigonometri::csc(30.0)); // Output: csc(30) = Some(2.0)
@@ -71,7 +71,7 @@ fn main() {
 
 ### 4. Hukum Sinus
 ```rust
-use sciencecalc_rs::math::trigonometri::Trigonometri;
+use sciencecalc_rs::matematika::trigonometri::Trigonometri;
 
 fn main() {
     let b = Trigonometri::law_of_sines(5.0, 30.0, 45.0);
@@ -84,7 +84,7 @@ fn main() {
 
 ### 5. Hukum Cosinus
 ```rust
-use sciencecalc_rs::math::trigonometri::Trigonometri;
+use sciencecalc_rs::matematika::trigonometri::Trigonometri;
 
 fn main() {
     let c = Trigonometri::law_of_cosines(5.0, 7.0, 60.0);

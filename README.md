@@ -94,30 +94,42 @@ Moles (mass=18g, molar mass=18g/mol): 1
 
 ## Fitur
 
-- **Matematika**
-  - Operasi aritmetika dasar: tambah, kurang, kali, bagi, faktorial, pangkat, akar.
-  - Operasi trigonometri: sinus, cosinus, tangen, dan invers.
-  - Statistik dasar: rata-rata, median, modus, deviasi standar.
-  - Persamaan dan sistem persamaan linear.
-  - Operasi matriks: penjumlahan, perkalian, invers, determinan.
+<details>
+<summary><strong>Matematika</strong></summary>
 
-- **Fisika**
-  - Kalkulasi gaya, energi, dan gerak.
-  - Perhitungan hukum Newton.
-  - Konversi satuan fisika.
-  - Kalkulasi kelistrikan (arus, tegangan, hambatan).
+<ul>
+  <li>Operasi aritmetika dasar: tambah, kurang, kali, bagi, faktorial, pangkat, akar.</li>
+  <li>Operasi trigonometri: sinus, cosinus, tangen, dan invers.</li>
+  <li>Statistik dasar: rata-rata, median, modus, deviasi standar.</li>
+  <li>Persamaan dan sistem persamaan linear.</li>
+  <li>Operasi matriks: penjumlahan, perkalian, invers, determinan.</li>
+</ul>
+</details>
 
-- **Kimia**
-  - Perhitungan mol dan massa molar.
-  - Stoikiometri reaksi kimia.
-  - Kalkulasi larutan: konsentrasi, molaritas.
-  - Hukum gas ideal.
+<details>
+<summary><strong>Fisika</strong></summary>
 
-- **Konversi Sistem Bilangan**
-  - Konversi desimal, biner, oktal, dan heksadesimal.
+<ul>
+  <li>Kalkulasi gaya, energi, dan gerak.</li>
+  <li>Perhitungan hukum Newton.</li>
+  <li>Konversi satuan fisika.</li>
+  <li>Kalkulasi kelistrikan (arus, tegangan, hambatan).</li>
+</ul>
+</details>
 
-- **Contoh Penggunaan**
-  - Tersedia contoh kode untuk tiap fitur utama.
+<details>
+<summary><strong>Kimia</strong></summary>
+
+<ul>
+  <li>Perhitungan mol dan massa molar.</li>
+  <li>Stoikiometri reaksi kimia.</li>
+  <li>Kalkulasi larutan: konsentrasi, molaritas.</li>
+  <li>Hukum gas ideal.</li>
+</ul>
+</details>
+
+<details>
+<summary><strong>Konversi Sistem Bilangan</strong></summary>
 
 ## Dokumentasi Lengkap
 

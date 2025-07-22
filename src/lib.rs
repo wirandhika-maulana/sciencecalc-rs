@@ -3,12 +3,13 @@
 
 // Modul Matematika
 pub mod math {
-    pub mod aljabar;
-    pub mod basis;
-    pub mod geometri;
-    pub mod aritmetika;
-    pub mod trigonometri;
-    pub mod statistika;
+    pub mod aritmetika;      // Aritmetika dasar / Basic arithmetic
+    pub mod aljabar;         // Aljabar / Algebra
+    pub mod trigonometri;    // Trigonometri / Trigonometry
+    pub mod geometri;        // Geometri / Geometry
+    pub mod statistika;      // Statistika / Statistics
+    pub mod kombinatorika;    // Kombinatorik & Peluang / Combinatorics & Probability
+    pub mod basis;  // Konversi basis bilangan / Number base conversion
 }
 
 // Modul Fisika

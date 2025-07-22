@@ -1,6 +1,6 @@
 # Konversi Basis
 
-Modul [**Konversi Basis**](../src/math/basis.rs) pada pustaka **sciencecalc-rs** menyediakan fungsi untuk mengubah angka dari satu basis ke basis lain. Modul ini mendukung basis antara 2 hingga 36.
+Modul [**Konversi Basis**](../src/matematika/basis.rs) pada pustaka **sciencecalc-rs** menyediakan fungsi untuk mengubah angka dari satu basis ke basis lain. Modul ini mendukung basis antara 2 hingga 36.
 
 ---
 
@@ -22,7 +22,7 @@ pub fn basis(num: u64, base: u32) -> String;
 
 #### Contoh Penggunaan
 ```rust
-use sciencecalc_rs::math::basis::basis;
+use sciencecalc_rs::matematika::basis::basis;
 
 fn main() {
     let hasil = basis(255, 16);
@@ -48,7 +48,7 @@ pub fn parse_number(num_str: &str, from_base: u32) -> u64;
 
 #### Contoh Penggunaan
 ```rust
-use sciencecalc_rs::math::basis::parse_number;
+use sciencecalc_rs::matematika::basis::parse_number;
 
 fn main() {
     let hasil = parse_number("FF", 16);
@@ -100,7 +100,7 @@ pub fn oktal_ke_hexadesimal(num_str: &str) -> String;
 
 ### Desimal ke Biner
 ```rust
-use sciencecalc_rs::math::basis::desimal_ke_biner;
+use sciencecalc_rs::matematika::basis::desimal_ke_biner;
 
 fn main() {
     let hasil = desimal_ke_biner(10);
@@ -110,7 +110,7 @@ fn main() {
 
 ### Biner ke Desimal
 ```rust
-use sciencecalc_rs::math::basis::biner_ke_desimal;
+use sciencecalc_rs::matematika::basis::biner_ke_desimal;
 
 fn main() {
     let hasil = biner_ke_desimal("1010");
@@ -120,7 +120,7 @@ fn main() {
 
 ### Heksadesimal ke Biner
 ```rust
-use sciencecalc_rs::math::basis::hexadesimal_ke_biner;
+use sciencecalc_rs::matematika::basis::hexadesimal_ke_biner;
 
 fn main() {
     let hasil = hexadesimal_ke_biner("FF");
@@ -130,7 +130,7 @@ fn main() {
 
 ### Oktal ke Desimal
 ```rust
-use sciencecalc_rs::math::basis::oktal_ke_desimal;
+use sciencecalc_rs::matematika::basis::oktal_ke_desimal;
 
 fn main() {
     let hasil = oktal_ke_desimal("17");

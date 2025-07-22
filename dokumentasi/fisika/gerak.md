@@ -1,6 +1,6 @@
 # Gerak
 
-Modul [`gerak.rs`](../src/math/gerak.rs) pada pustaka **sciencecalc-rs** menyediakan fungsi perhitungan untuk **gerak lurus berubah beraturan (GLBB)**, yaitu perpindahan dan kecepatan akhir.
+Modul [`gerak.rs`](../src/fisika/gerak.rs) pada pustaka **sciencecalc-rs** menyediakan fungsi perhitungan untuk **gerak lurus berubah beraturan (GLBB)**, yaitu perpindahan dan kecepatan akhir.
 
 ---
 

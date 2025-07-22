@@ -2,7 +2,7 @@
 
 /// Fungsi untuk mengonversi angka desimal ke basis lain (2-36).
 /// Function to convert a decimal number to another base (2-36).
-pub fn basis(mut num: u64, base: u32) -> String 
+pub fn konversi_basis(mut num: u64, base: u32) -> String 
 {
     if base < 2 || base > 36 {
         panic!("Basis harus antara 2 hingga 36"); // Base must be between 2 and 36

@@ -5,12 +5,12 @@ fn main() {
         sciencecalc_rs::matematika::aritmetika::tambah(5.0, 3.0)
     );
     println!(
-        "Aljabar (Linear 1x1, 2x + 3 = 11): {:?}",
-        sciencecalc_rs::matematika::aljabar::persamaan_linear_1x1(2.0, 3.0, 11.0)
+        "Aljabar (SPLSV 2x + 3 = 0): {:?}",
+        sciencecalc_rs::matematika::aljabar::splsv(2.0, 3.0)
     );
     println!(
-        "Statistika (Rata-rata [1,2,3]): {}",
-        sciencecalc_rs::matematika::statistika::rata_rata(&[1.0, 2.0, 3.0])
+        "Statistika (Mean [1,2,3]): {}",
+        sciencecalc_rs::matematika::statistika::Statistika::mean(&[1.0, 2.0, 3.0])
     );
 
     // FISIKA

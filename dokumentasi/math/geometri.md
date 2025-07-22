@@ -102,7 +102,7 @@ impl Trapesium {
 
 ## **Contoh Penggunaan Bangun Datar**
 ```rust
-use sciencecalc_rs::math::geometri::bangun_datar::*;
+use sciencecalc_rs::matematika::geometri::bangun_datar::*;
 
 fn main() {
     let trapesium = Trapesium::new([10.0, 6.0, 5.0, 7.0], 4.0);
@@ -232,7 +232,7 @@ impl LimasPersegi {
 
 ## **Contoh Penggunaan Bangun Ruang**
 ```rust
-use sciencecalc_rs::math::geometri::bangun_ruang::*;
+use sciencecalc_rs::matematika::geometri::bangun_ruang::*;
 
 fn main() {
     let kubus = Kubus::new(5.0);
@@ -254,7 +254,7 @@ Diagonal Ruang Kubus: 8.66
 ---
 
 Dokumentasi ini mencakup seluruh struktur dan fungsi geometri pada pustaka **sciencecalc-rs**.  
-Untuk detail lebih lanjut, lihat source code di `src/math/geometri.rs`.  
+Untuk detail lebih lanjut, lihat source code di `src/matematika/geometri.rs`.  
 Semoga bermanfaat!
 
 ---

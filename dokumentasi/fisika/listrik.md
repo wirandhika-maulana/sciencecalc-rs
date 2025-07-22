@@ -19,7 +19,7 @@ Modul [`listrik.rs`](../src/fisika/listrik.rs) pada pustaka **sciencecalc-rs** m
 ### 1. Menghitung Tegangan (V)
 
 ```rust
-use sciencecalc_rs::math::listrik::ohm_tegangannya;
+use sciencecalc_rs::fisika::listrik::ohm_tegangannya;
 
 fn main() {
     let arus = 2.0;      // ampere
@@ -34,7 +34,7 @@ fn main() {
 ### 2. Menghitung Arus (I)
 
 ```rust
-use sciencecalc_rs::math::listrik::ohm_arusnya;
+use sciencecalc_rs::fisika::listrik::ohm_arusnya;
 
 fn main() {
     let tegangan = 10.0; // volt
@@ -49,7 +49,7 @@ fn main() {
 ### 3. Menghitung Hambatan (R)
 
 ```rust
-use sciencecalc_rs::math::listrik::ohm_hambatannya;
+use sciencecalc_rs::fisika::listrik::ohm_hambatannya;
 
 fn main() {
     let tegangan = 10.0; // volt

@@ -1,112 +1,101 @@
-# **Modul Geometri dalam `sciencecalc-rs`**
+# Modul Geometri dalam `sciencecalc-rs`
 
 Modul ini menyediakan berbagai struktur dan metode untuk menghitung luas, keliling, volume, dan properti lain dari bangun datar serta bangun ruang dalam bahasa Rust.
 
 ---
 
-## **1. `bangun_datar`**
+## Bangun Datar
 
-Modul ini berisi definisi bangun datar seperti **Persegi, Persegi Panjang, Segitiga, Lingkaran, Jajargenjang, dan Trapesium**.  
-Setiap bangun memiliki metode untuk menghitung luas dan keliling.
-
-### **a. Persegi**
+### Persegi
 ```rust
-pub struct Persegi {
-    pub sisi: f64,
-}
-
+pub struct Persegi { pub sisi: f64 }
 impl Persegi {
-    pub fn new(sisi: f64) -> Self { Self { sisi } }
-    pub fn luas(&self) -> f64 { self.sisi.powi(2) }
-    pub fn keliling(&self) -> f64 { 4.0 * self.sisi }
+    pub fn new(sisi: f64) -> Self
+    pub fn luas(&self) -> f64
+    pub fn keliling(&self) -> f64
 }
 ```
-
-### **b. PersegiPanjang**
-```rust
-pub struct PersegiPanjang {
-    pub panjang: f64,
-    pub lebar: f64,
-}
-
-impl PersegiPanjang {
-    pub fn new(panjang: f64, lebar: f64) -> Self { Self { panjang, lebar } }
-    pub fn luas(&self) -> f64 { self.panjang * self.lebar }
-    pub fn keliling(&self) -> f64 { 2.0 * (self.panjang + self.lebar) }
-}
-```
-
-### **c. Segitiga**
-```rust
-pub struct Segitiga {
-    pub alas: f64,
-    pub tinggi: f64,
-    pub sisi: [f64; 3],
-}
-
-impl Segitiga {
-    pub fn new(alas: f64, tinggi: f64, sisi: [f64; 3]) -> Self { Self { alas, tinggi, sisi } }
-    pub fn luas(&self) -> f64 { 0.5 * self.alas * self.tinggi }
-    pub fn keliling(&self) -> f64 { self.sisi.iter().sum() }
-}
-```
-
-### **d. Lingkaran**
-```rust
-use std::f64::consts::PI;
-
-pub struct Lingkaran {
-    pub r: f64,
-}
-
-impl Lingkaran {
-    pub fn new(r: f64) -> Self { Self { r } }
-    pub fn luas(&self) -> f64 { PI * self.r.powi(2) }
-    pub fn keliling(&self) -> f64 { 2.0 * PI * self.r }
-}
-```
-
-### **e. Jajargenjang**
-```rust
-pub struct Jajargenjang {
-    pub alas: f64,
-    pub tinggi: f64,
-    pub sisi_miring: f64,
-}
-
-impl Jajargenjang {
-    pub fn new(alas: f64, tinggi: f64, sisi_miring: f64) -> Self {
-        Self { alas, tinggi, sisi_miring }
-    }
-    pub fn luas(&self) -> f64 { self.alas * self.tinggi }
-    pub fn keliling(&self) -> f64 { 2.0 * (self.alas + self.sisi_miring) }
-}
-```
-
-### **f. Trapesium**
-```rust
-#[derive(Debug)]
-pub struct Trapesium {
-    pub sisi: [f64; 4],
-    pub tinggi: f64,
-}
-
-impl Trapesium {
-    pub fn new(sisi: [f64; 4], tinggi: f64) -> Self { Self { sisi, tinggi } }
-    pub fn luas(&self) -> f64 { 0.5 * (self.sisi[0] + self.sisi[1]) * self.tinggi }
-    pub fn keliling(&self) -> f64 { self.sisi.iter().sum() }
-}
-```
+- **Luas:** sisi × sisi  
+- **Keliling:** 4 × sisi
 
 ---
 
-## **Contoh Penggunaan Bangun Datar**
+### Persegi Panjang
 ```rust
-use sciencecalc_rs::matematika::geometri::bangun_datar::*;
+pub struct PersegiPanjang { pub panjang: f64, pub lebar: f64 }
+impl PersegiPanjang {
+    pub fn new(panjang: f64, lebar: f64) -> Self
+    pub fn luas(&self) -> f64
+    pub fn keliling(&self) -> f64
+}
+```
+- **Luas:** panjang × lebar  
+- **Keliling:** 2 × (panjang + lebar)
+
+---
+
+### Segitiga
+```rust
+pub struct Segitiga { pub alas: f64, pub tinggi: f64, pub sisi: [f64; 3] }
+impl Segitiga {
+    pub fn new(alas: f64, tinggi: f64, sisi: [f64; 3]) -> Self
+    pub fn luas(&self) -> f64
+    pub fn keliling(&self) -> f64
+}
+```
+- **Luas:** ½ × alas × tinggi  
+- **Keliling:** jumlah semua sisi
+
+---
+
+### Lingkaran
+```rust
+pub struct Lingkaran { pub r: f64 }
+impl Lingkaran {
+    pub fn new(r: f64) -> Self
+    pub fn luas(&self) -> f64
+    pub fn keliling(&self) -> f64
+}
+```
+- **Luas:** π × r²  
+- **Keliling:** 2 × π × r
+
+---
+
+### Jajargenjang
+```rust
+pub struct Jajargenjang { pub alas: f64, pub tinggi: f64, pub sisi_miring: f64 }
+impl Jajargenjang {
+    pub fn new(alas: f64, tinggi: f64, sisi_miring: f64) -> Self
+    pub fn luas(&self) -> f64
+    pub fn keliling(&self) -> f64
+}
+```
+- **Luas:** alas × tinggi  
+- **Keliling:** 2 × (alas + sisi miring)
+
+---
+
+### Trapesium
+```rust
+pub struct Trapesium { pub sisi: [f64; 4], pub tinggi: f64 }
+impl Trapesium {
+    pub fn new(sisi: [f64; 4], tinggi: f64) -> Self
+    pub fn luas(&self) -> f64
+    pub fn keliling(&self) -> f64
+}
+```
+- **Luas:** ½ × (sisi atas + sisi bawah) × tinggi (`sisi[0]` dan `sisi[1]`)  
+- **Keliling:** jumlah semua sisi
+
+---
+
+## Contoh Penggunaan Bangun Datar
+```rust
+use sciencecalc_rs::matematika::geometri::*;
 
 fn main() {
     let trapesium = Trapesium::new([10.0, 6.0, 5.0, 7.0], 4.0);
-
     println!("Luas Trapesium: {:.2}", trapesium.luas());
     println!("Keliling Trapesium: {:.2}", trapesium.keliling());
 }
@@ -119,80 +108,91 @@ Keliling Trapesium: 28.00
 
 ---
 
-## **2. `bangun_ruang`**
+## Bangun Ruang
 
-Definisi untuk **Kubus, Balok, Bola, Tabung, Kerucut, Limas Segitiga, dan Limas Persegi**.
-
-### **a. Kubus**
+### Kubus
 ```rust
 pub struct Kubus { pub sisi: f64 }
-
 impl Kubus {
-    pub fn new(sisi: f64) -> Self { Self { sisi } }
-    pub fn volume(&self) -> f64 { self.sisi.powi(3) }
-    pub fn luas_permukaan(&self) -> f64 { 6.0 * self.sisi.powi(2) }
-    pub fn diagonal_bidang(&self) -> f64 { self.sisi * 2.0_f64.sqrt() }
-    pub fn diagonal_ruang(&self) -> f64 { self.sisi * 3.0_f64.sqrt() }
+    pub fn new(sisi: f64) -> Self
+    pub fn volume(&self) -> f64
+    pub fn luas_permukaan(&self) -> f64
+    pub fn diagonal_bidang(&self) -> f64
+    pub fn diagonal_ruang(&self) -> f64
 }
 ```
+- **Volume:** sisi³  
+- **Luas permukaan:** 6 × sisi²
 
-### **b. Balok**
+---
+
+### Balok
 ```rust
-pub struct Balok {
-    pub panjang: f64,
-    pub lebar: f64,
-    pub tinggi: f64,
-}
-
+pub struct Balok { pub panjang: f64, pub lebar: f64, pub tinggi: f64 }
 impl Balok {
-    pub fn new(panjang: f64, lebar: f64, tinggi: f64) -> Self { Self { panjang, lebar, tinggi } }
-    pub fn volume(&self) -> f64 { self.panjang * self.lebar * self.tinggi }
-    pub fn luas_permukaan(&self) -> f64 {
-        2.0 * (self.panjang * self.lebar + self.panjang * self.tinggi + self.lebar * self.tinggi)
-    }
-    pub fn diagonal_ruang(&self) -> f64 {
-        (self.panjang.powi(2) + self.lebar.powi(2) + self.tinggi.powi(2)).sqrt()
-    }
+    pub fn new(panjang: f64, lebar: f64, tinggi: f64) -> Self
+    pub fn volume(&self) -> f64
+    pub fn luas_permukaan(&self) -> f64
+    pub fn keliling(&self) -> f64
+    pub fn luas_sisi(&self) -> [f64; 3]
+    pub fn diagonal_bidang(&self) -> f64
+    pub fn diagonal_ruang(&self) -> f64
 }
 ```
+- **Volume:** panjang × lebar × tinggi
 
-### **c. Bola**
+---
+
+### Bola
 ```rust
 pub struct Bola { pub r: f64 }
-
 impl Bola {
-    pub fn new(r: f64) -> Self { Self { r } }
-    pub fn luas_permukaan(&self) -> f64 { 4.0 * PI * self.r.powi(2) }
-    pub fn volume(&self) -> f64 { (4.0 / 3.0) * PI * self.r.powi(3) }
+    pub fn new(r: f64) -> Self
+    pub fn volume(&self) -> f64
+    pub fn luas_permukaan(&self) -> f64
+    pub fn keliling(&self) -> f64
+    pub fn setengah_volume(&self) -> f64
 }
 ```
+- **Volume:** (4/3) × π × r³  
+- **Luas permukaan:** 4 × π × r²
 
-### **d. Tabung**
+---
+
+### Tabung
 ```rust
 pub struct Tabung { pub r: f64, pub tinggi: f64 }
-
 impl Tabung {
-    pub fn new(r: f64, tinggi: f64) -> Self { Self { r, tinggi } }
-    pub fn volume(&self) -> f64 { PI * self.r.powi(2) * self.tinggi }
-    pub fn luas_alas(&self) -> f64 { 2.0 * PI * self.r * (self.r + self.tinggi) }
-    pub fn keliling_alas(&self) -> f64 { 2.0 * PI * self.r }
+    pub fn new(r: f64, tinggi: f64) -> Self
+    pub fn volume(&self) -> f64
+    pub fn luas_permukaan(&self) -> f64
+    pub fn luas_alas(&self) -> f64
+    pub fn keliling_alas(&self) -> f64
 }
 ```
+- **Volume:** π × r² × tinggi  
+- **Luas permukaan:** 2 × π × r × (r + t)
 
-### **e. Kerucut**
+---
+
+### Kerucut
 ```rust
 pub struct Kerucut { pub r: f64, pub tinggi: f64 }
-
 impl Kerucut {
-    pub fn new(r: f64, tinggi: f64) -> Self { Self { r, tinggi } }
-    pub fn volume(&self) -> f64 { (1.0 / 3.0) * PI * self.r.powi(2) * self.tinggi }
-    pub fn luas_alas(&self) -> f64 { PI * self.r.powi(2) }
-    pub fn garis_pelukis(&self) -> f64 { (self.r.powi(2) + self.tinggi.powi(2)).sqrt() }
-    pub fn luas_permukaan(&self) -> f64 { PI * self.r * (self.r + self.garis_pelukis()) }
+    pub fn new(r: f64, tinggi: f64) -> Self
+    pub fn volume(&self) -> f64
+    pub fn luas_alas(&self) -> f64
+    pub fn garis_pelukis(&self) -> f64
+    pub fn luas_permukaan(&self) -> f64
+    pub fn luas_selimut(&self) -> f64
 }
 ```
+- **Volume:** (1/3) × π × r² × t  
+- **Luas permukaan:** π × r × (r + s), s = garis pelukis
 
-### **f. Limas Segitiga**
+---
+
+### Limas Segitiga
 ```rust
 pub struct LimasSegitiga {
     pub tinggi: f64,
@@ -201,18 +201,15 @@ pub struct LimasSegitiga {
     pub tinggi_alas: f64,
     pub sisi_tegak: [(f64, f64); 3],
 }
-
 impl LimasSegitiga {
-    pub fn new(tinggi: f64, alas_segitiga: f64, tinggi_segitiga: f64, tinggi_alas: f64, sisi_tegak: [(f64, f64); 3]) -> Self {
-        Self { tinggi, alas_segitiga, tinggi_segitiga, tinggi_alas, sisi_tegak }
-    }
-    pub fn volume(&self) -> f64 {
-        (1.0 / 3.0) * (0.5 * self.alas_segitiga * self.tinggi_segitiga) * self.tinggi
-    }
+    pub fn new(...)
+    pub fn volume(&self) -> f64
+    pub fn luas_alas(&self) -> f64
+    pub fn luas_permukaan(&self) -> f64
 }
 ```
 
-### **g. Limas Persegi**
+### Limas Persegi
 ```rust
 pub struct LimasPersegi {
     pub panjang_alas: f64,
@@ -220,19 +217,21 @@ pub struct LimasPersegi {
     pub tinggi: f64,
     pub tinggi_tegak: f64,
 }
-
 impl LimasPersegi {
-    pub fn new(panjang_alas: f64, lebar_alas: f64, tinggi: f64, tinggi_tegak: f64) -> Self {
-        Self { panjang_alas, lebar_alas, tinggi, tinggi_tegak }
-    }
+    pub fn new(...)
+    pub fn volume(&self) -> f64
+    pub fn luas_alas(&self) -> f64
+    pub fn luas_permukaan(&self) -> f64
+    pub fn keliling_alas(&self) -> f64
+    pub fn keliling_total(&self) -> f64
 }
 ```
 
 ---
 
-## **Contoh Penggunaan Bangun Ruang**
+## Contoh Penggunaan Bangun Ruang
 ```rust
-use sciencecalc_rs::matematika::geometri::bangun_ruang::*;
+use sciencecalc_rs::matematika::geometri::*;
 
 fn main() {
     let kubus = Kubus::new(5.0);

@@ -1,20 +1,26 @@
-use sciencecalc_rs::chemistry::stoichiometry::moles;
-use sciencecalc_rs::chemistry::gas::ideal_gas_pressure;
-use sciencecalc_rs::chemistry::solution::{molarity, ph_strong_acid};
-use sciencecalc_rs::chemistry::reaction::{product_mass, percent_yield};
+use sciencecalc_rs::chemistry::stoikiometri::jumlah_mol;
+use sciencecalc_rs::chemistry::gas::tekanan_gas_ideal;
+use sciencecalc_rs::chemistry::larutan::{molaritas, ph_asam_kuat};
+use sciencecalc_rs::chemistry::reaksi::{massa_produk, persen_hasil};
 
 fn main() {
-    println!("=== Stoichiometry ===");
-    println!("Moles (mass=18g, molar mass=18g/mol): {}", moles(18.0, 18.0));
+    println!("=== Stoikiometri ===");
+    println!("Jumlah mol (massa=18g, massa molar=18g/mol): {}", jumlah_mol(18.0, 18.0));
 
-    println!("\n=== Gas Law ===");
-    println!("Ideal Gas Pressure (n=2, R=0.082, T=300K, V=10L): {}", ideal_gas_pressure(2.0, 0.082, 300.0, 10.0));
+    println!("\n=== Hukum Gas Ideal ===");
+    println!(
+        "Tekanan gas ideal (n=2, R=0.082, T=300K, V=10L): {}",
+        tekanan_gas_ideal(2.0, 0.082, 300.0, 10.0)
+    );
 
-    println!("\n=== Solution ===");
-    println!("Molarity (moles=2, volume=1L): {}", molarity(2.0, 1.0));
-    println!("pH of strong acid ([H+]=0.01): {}", ph_strong_acid(0.01));
+    println!("\n=== Larutan ===");
+    println!("Molaritas (jumlah mol=2, volume=1L): {}", molaritas(2.0, 1.0));
+    println!("pH asam kuat ([H+]=0.01): {}", ph_asam_kuat(0.01));
 
-    println!("\n=== Reaction ===");
-    println!("Product mass (moles=2, molar mass=18g/mol): {}", product_mass(2.0, 18.0));
-    println!("Percent yield (actual=15g, theoretical=18g): {:.2}%", percent_yield(15.0, 18.0));
+    println!("\n=== Reaksi ===");
+    println!("Massa produk (jumlah mol=2, massa molar=18g/mol): {}", massa_produk(2.0, 18.0));
+    println!(
+        "Persen hasil (aktual=15g, teoritis=18g): {:.2}%",
+        persen_hasil(15.0, 18.0)
+    );
 }

@@ -18,7 +18,7 @@ Modul [`gerak.rs`](../src/fisika/gerak.rs) pada pustaka **sciencecalc-rs** menye
 ### 1. Perpindahan GLBB
 
 ```rust
-use sciencecalc_rs::math::gerak::glbb_perpindahan;
+use sciencecalc_rs::fisika::gerak::glbb_perpindahan;
 
 fn main() {
     let v0 = 2.0;   // m/s
@@ -34,7 +34,7 @@ fn main() {
 ### 2. Kecepatan Akhir GLBB
 
 ```rust
-use sciencecalc_rs::math::gerak::glbb_kecepatan_akhir;
+use sciencecalc_rs::fisika::gerak::glbb_kecepatan_akhir;
 
 fn main() {
     let v0 = 2.0;   // m/s

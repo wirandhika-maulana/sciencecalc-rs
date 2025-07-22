@@ -15,7 +15,7 @@ Modul [`stoikiometri.rs`](../src/kimia/stoikiometri.rs) pada pustaka **scienceca
 ## 📍 Penjelasan & Contoh Penggunaan
 
 ```rust
-use sciencecalc_rs::math::stoikiometri::jumlah_mol;
+use sciencecalc_rs::kimia::stoikiometri::jumlah_mol;
 
 fn main() {
     let massa = 18.0;         // gram (contoh: air)

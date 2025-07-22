@@ -1,9 +1,9 @@
 pub mod aljabar;
 pub mod trigonometri;
 pub mod geometri;
-pub mod statistik;
+pub mod statistika;
 
 pub use aljabar::*;
 pub use trigonometri::*;
 pub use geometri::*;
-pub use statistik::*;
+pub use statistika::*;

@@ -26,7 +26,7 @@ Seluruh fungsi statistik diakses melalui struktur `Statistika`.
 
 ### 1. Mean (Rata-rata)
 ```rust
-use sciencecalc_rs::matematika::statistika::Statistika;
+use sciencecalc_rs::matematika::Statistika;
 
 fn main() {
     let data = [3.0, 5.0, 7.0, 9.0];
@@ -39,7 +39,7 @@ fn main() {
 
 ### 2. Median
 ```rust
-use sciencecalc_rs::matematika::statistika::Statistika;
+use sciencecalc_rs::matematika::Statistika;
 
 fn main() {
     let mut data = [4.0, 1.0, 7.0, 3.0, 9.0];
@@ -52,7 +52,7 @@ fn main() {
 
 ### 3. Modus
 ```rust
-use sciencecalc_rs::matematika::statistika::Statistika;
+use sciencecalc_rs::matematika::Statistika;
 
 fn main() {
     let data = [2, 4, 4, 5, 5, 5, 2, 2];
@@ -65,7 +65,7 @@ fn main() {
 
 ### 4. Varian
 ```rust
-use sciencecalc_rs::matematika::statistika::Statistika;
+use sciencecalc_rs::matematika::Statistika;
 
 fn main() {
     let data = [2.0, 4.0, 4.0, 4.0, 5.0, 5.0, 7.0, 9.0];
@@ -78,7 +78,7 @@ fn main() {
 
 ### 5. Standar Deviasi
 ```rust
-use sciencecalc_rs::matematika::statistika::Statistika;
+use sciencecalc_rs::matematika::Statistika;
 
 fn main() {
     let data = [2.0, 4.0, 4.0, 4.0, 5.0, 5.0, 7.0, 9.0];

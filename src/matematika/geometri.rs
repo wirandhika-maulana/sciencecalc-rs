@@ -104,7 +104,6 @@ impl Segitiga {
             self.sisi.iter().sum::<f64>() // Menjumlahkan semua sisi
         }
     }
-}
 
 // ================= BANGUN RUANG ==================
 

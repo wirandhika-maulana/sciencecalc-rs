@@ -1,6 +1,6 @@
 # Listrik
 
-Modul [`listrik.rs`](../src/math/listrik.rs) pada pustaka **sciencecalc-rs** menyediakan fungsi-fungsi perhitungan dasar kelistrikan menggunakan **Hukum Ohm**.
+Modul [`listrik.rs`](../src/fisika/listrik.rs) pada pustaka **sciencecalc-rs** menyediakan fungsi-fungsi perhitungan dasar kelistrikan menggunakan **Hukum Ohm**.
 
 ---
 

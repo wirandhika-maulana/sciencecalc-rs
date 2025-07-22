@@ -1,6 +1,6 @@
 # Energi
 
-Modul [`energi.rs`](../src/math/energi.rs) pada pustaka **sciencecalc-rs** menyediakan fungsi-fungsi untuk menghitung energi **kinetik** dan **potensial**.
+Modul [`energi.rs`](../src/fisika/energi.rs) pada pustaka **sciencecalc-rs** menyediakan fungsi-fungsi untuk menghitung energi **kinetik** dan **potensial**.
 
 ---
 

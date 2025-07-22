@@ -15,7 +15,7 @@ Modul [`gaya.rs`](../src/fisika/gaya.rs) pada pustaka **sciencecalc-rs** menyedi
 ## 📍 Penjelasan & Contoh Penggunaan
 
 ```rust
-use sciencecalc_rs::math::gaya::gaya;
+use sciencecalc_rs::fisika::gaya::gaya;
 
 fn main() {
     let massa = 10.0;       // kg

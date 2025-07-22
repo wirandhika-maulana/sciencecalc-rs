@@ -128,9 +128,6 @@ Moles (mass=18g, molar mass=18g/mol): 1
 </ul>
 </details>
 
-<details>
-<summary><strong>Konversi Sistem Bilangan</strong></summary>
-
 ## Dokumentasi Lengkap
 
 Dokumentasi lengkap pustaka ini dapat diakses melalui tautan berikut:  

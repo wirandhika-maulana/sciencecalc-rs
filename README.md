@@ -97,11 +97,15 @@ Jumlah mol (massa=18g, massa molar=18g/mol): 1
 <summary><strong>Matematika</strong></summary>
 
 <ul>
-  <li>Operasi aritmetika dasar: tambah, kurang, kali, bagi, faktorial, pangkat, akar.</li>
-  <li>Operasi trigonometri: sinus, cosinus, tangen, dan invers.</li>
-  <li>Statistika dasar: rata-rata, median, modus, deviasi standar.</li>
-  <li>Persamaan dan sistem persamaan linear.</li>
-  <li>Operasi matriks: penjumlahan, perkalian, invers, determinan.</li>
+  <li><strong>Aritmetika dasar:</strong> tambah, kurang, kali, bagi, pembulatan, modulo, nilai absolut.</li>
+  <li><strong>Aljabar:</strong> faktorial, kombinasi, permutasi, sistem persamaan linear (SPL satu, dua, tiga variabel), persamaan kuadrat, operasi matriks 2x2 dan 3x3 (perkalian, invers, determinan, transpose).</li>
+  <li><strong>Trigonometri:</strong> sinus, cosinus, tangen, invers, konversi derajat/radian.</li>
+  <li><strong>Geometri:</strong> rumus luas dan keliling berbagai bangun datar dan volume bangun ruang.</li>
+  <li><strong>Statistika:</strong> rata-rata, median, modus, deviasi standar, operasi data statistik.</li>
+  <li><strong>Kombinatorika & Peluang:</strong> perhitungan kombinatorik (faktorial, permutasi, kombinasi), peluang sederhana.</li>
+  <li><strong>Konversi basis bilangan:</strong> desimal, biner, oktal, heksadesimal.</li>
+  <li><strong>Deret Fibonacci:</strong> rekursif, iteratif, rumus Binet, cek genap dan prima.</li>
+  <li><strong>Operasi pada array:</strong> penjumlahan, pengurangan, perkalian, pembagian banyak bilangan sekaligus.</li>
 </ul>
 </details>
 
@@ -109,10 +113,12 @@ Jumlah mol (massa=18g, massa molar=18g/mol): 1
 <summary><strong>Fisika</strong></summary>
 
 <ul>
-  <li>Kalkulasi gaya, energi, gerak, dan listrik.</li>
-  <li>Perhitungan hukum Newton.</li>
-  <li>Konversi satuan fisika.</li>
-  <li>Kalkulasi kelistrikan (arus, tegangan, hambatan).</li>
+  <li><strong>Gaya:</strong> perhitungan gaya (F = m × a).</li>
+  <li><strong>Energi:</strong> energi kinetik, energi potensial, hukum kekekalan energi.</li>
+  <li><strong>Listrik:</strong> hukum Ohm (arus, tegangan, hambatan), daya listrik.</li>
+  <li><strong>Gerak:</strong> GLB, GLBB, jarak, kecepatan, percepatan.</li>
+  <li><strong>Konversi satuan fisika:</strong> massa, panjang, waktu, energi, dan lain-lain.</li>
+  <li><strong>Hukum Newton:</strong> gaya, percepatan, massa, dan penerapannya.</li>
 </ul>
 </details>
 
@@ -120,10 +126,10 @@ Jumlah mol (massa=18g, massa molar=18g/mol): 1
 <summary><strong>Kimia</strong></summary>
 
 <ul>
-  <li>Perhitungan mol dan massa molar.</li>
-  <li>Stoikiometri reaksi kimia.</li>
-  <li>Kalkulasi larutan: konsentrasi, molaritas, pH.</li>
-  <li>Hukum gas ideal.</li>
+  <li><strong>Gas:</strong> hukum gas ideal, tekanan, volume, suhu, jumlah mol.</li>
+  <li><strong>Reaksi:</strong> massa produk reaksi, persentase hasil reaksi, stoikiometri reaksi.</li>
+  <li><strong>Larutan:</strong> konsentrasi, molaritas, pH, volume, massa zat terlarut.</li>
+  <li><strong>Stoikiometri:</strong> perhitungan jumlah mol, konversi massa ke mol, dan sebaliknya.</li>
 </ul>
 </details>
 

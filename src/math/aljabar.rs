@@ -66,7 +66,7 @@ impl Aljabar {
     }
 
     // ==================
-    // Sistem Persamaan Linear Satu Variabel / Single Variable
+    // Sistem Persamaan Linear Satu Variabel / Single Variable (SPLSV)
     // ==================
     pub fn splsv(a: f64, b: f64) -> Option<f64> {
         if a == 0.0 {
@@ -94,7 +94,7 @@ impl Aljabar {
     }
 
     // ==================
-    // Sistem Persamaan Linear Dua Variabel / Two Variables
+    // Sistem Persamaan Linear Dua Variabel / Two Variables (SPLDV)
     // ==================
     pub fn spldv(a1: f64, b1: f64, c1: f64, a2: f64, b2: f64, c2: f64) -> Option<(f64, f64)> {
         let det = a1 * b2 - a2 * b1;
@@ -130,7 +130,7 @@ impl Aljabar {
     }
 
     // ==================
-    // Sistem Persamaan Linear Tiga Variabel / Three Variables
+    // Sistem Persamaan Linear Tiga Variabel / Three Variables (SPLTV)
     // ==================
     pub fn spltv(
         a1: f64, b1: f64, c1: f64, d1: f64,
@@ -218,3 +218,4 @@ impl Aljabar {
         ])
     }
                  }
+ 

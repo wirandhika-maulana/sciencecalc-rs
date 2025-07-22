@@ -2,7 +2,7 @@
 //! ScienceCalc - Math, Physics, and Chemistry calculations toolkit for Rust.
 
 // Modul Matematika
-pub mod math {
+pub mod matematika {
     pub mod aritmetika;      // Aritmetika dasar / Basic arithmetic
     pub mod aljabar;         // Aljabar / Algebra
     pub mod trigonometri;    // Trigonometri / Trigonometry
@@ -13,7 +13,7 @@ pub mod math {
 }
 
 // Modul Fisika
-pub mod physics {
+pub mod fisika {
     pub mod gaya;          // Force
     pub mod gerak;         // Motion
     pub mod listrik;       // Electricity
@@ -21,7 +21,7 @@ pub mod physics {
 }
 
 // Modul Kimia
-pub mod chemistry {
+pub mod kimia {
     pub mod stoikiometri;  // Stoichiometry
     pub mod gas;           // Gas
     pub mod larutan;       // Solution

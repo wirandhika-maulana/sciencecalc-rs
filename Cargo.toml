@@ -1,0 +1,13 @@
+[package]
+name = "sciencecalc-rs"
+version = "0.1.0"
+edition = "2021"
+authors = ["Wirandhika Maulana Akbar <randikacreator22@gmail.com>"]
+description = "A calculation toolkit for mathematics, physics, and chemistry in Rust"
+license = "MIT"
+repository = "https://github.com/wirandhika-maulana/sciencecalc-rs"
+keywords = ["math", "physics", "chemistry", "science", "calculator"]
+categories = ["science", "education", "mathematics"]
+readme = "README.md"
+
+[dependencies]

@@ -217,5 +217,79 @@ impl Aljabar {
             [ -c/det, a/det ],
         ])
     }
-                 }
+// ==================
+// Matriks 3x3 dan Transpose / 3x3 Matrix and Transpose
+// ==================
+
+/// Determinan matriks 3x3 / 3x3 matrix determinant
+pub fn determinant_3x3(m: [[f64; 3]; 3]) -> f64 {
+    m[0][0] * (m[1][1]*m[2][2] - m[1][2]*m[2][1]) -
+    m[0][1] * (m[1][0]*m[2][2] - m[1][2]*m[2][0]) +
+    m[0][2] * (m[1][0]*m[2][1] - m[1][1]*m[2][0])
+}
+
+/// Transpose matriks 2x2 / 2x2 matrix transpose
+pub fn transpose_2x2(m: [[f64; 2]; 2]) -> [[f64; 2]; 2] {
+    [
+        [m[0][0], m[1][0]],
+        [m[0][1], m[1][1]],
+    ]
+}
+
+/// Transpose matriks 3x3 / 3x3 matrix transpose
+pub fn transpose_3x3(m: [[f64; 3]; 3]) -> [[f64; 3]; 3] {
+    [
+        [m[0][0], m[1][0], m[2][0]],
+        [m[0][1], m[1][1], m[2][1]],
+        [m[0][2], m[1][2], m[2][2]],
+    ]
+}
+
+/// Perkalian matriks 3x3 / 3x3 matrix multiplication
+pub fn multiply_3x3(a: [[f64; 3]; 3], b: [[f64; 3]; 3]) -> [[f64; 3]; 3] {
+    let mut result = [[0.0; 3]; 3];
+    for i in 0..3 {
+        for j in 0..3 {
+            for k in 0..3 {
+                result[i][j] += a[i][k] * b[k][j];
+            }
+        }
+    }
+    result
+}
+
+/// Invers matriks 3x3 / 3x3 matrix inverse (mengembalikan Option, None jika tak invertible)
+pub fn inverse_3x3(m: [[f64; 3]; 3]) -> Option<[[f64; 3]; 3]> {
+    let det = Self::determinant_3x3(m);
+    if det == 0.0 { return None; }
+    // Hitung kofaktor
+    let mut cof = [[0.0; 3]; 3];
+    for i in 0..3 {
+        for j in 0..3 {
+            let submat = |x: usize, y: usize| -> f64 {
+                let mut vals = vec![];
+                for r in 0..3 {
+                    for c in 0..3 {
+                        if r != i && c != j {
+                            vals.push(m[r][c]);
+                        }
+                    }
+                }
+                vals[0]*vals[3] - vals[1]*vals[2]
+            };
+            cof[i][j] = ((i+j)%2 == 0).then_some(1.0).unwrap_or(-1.0) * submat(i,j);
+        }
+    }
+    // Transpose kofaktor dan bagi determinan
+    let cof_t = Self::transpose_3x3(cof);
+    let mut inv = [[0.0; 3]; 3];
+    for i in 0..3 {
+        for j in 0..3 {
+            inv[i][j] = cof_t[i][j] / det;
+        }
+    }
+    Some(inv)
+}
+    
+}
  

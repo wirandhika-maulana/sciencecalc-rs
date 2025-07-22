@@ -26,11 +26,11 @@ Seluruh fungsi statistik diakses melalui struktur `Statistika`.
 
 ### 1. Mean (Rata-rata)
 ```rust
-use sciencecalc_rs::matematika::Statistika;
+use sciencecalc_rs::matematika::statistika;
 
 fn main() {
     let data = [3.0, 5.0, 7.0, 9.0];
-    let rataan = Statistika::mean(&data);
+    let rataan = statistika::mean(&data);
     println!("Mean: {:.2}", rataan); // Output: Mean: 6.00
 }
 ```
@@ -39,11 +39,11 @@ fn main() {
 
 ### 2. Median
 ```rust
-use sciencecalc_rs::matematika::Statistika;
+use sciencecalc_rs::matematika::statistika;
 
 fn main() {
     let mut data = [4.0, 1.0, 7.0, 3.0, 9.0];
-    let med = Statistika::median(&mut data);
+    let med = statistika::median(&mut data);
     println!("Median: {:.2}", med); // Output: Median: 4.00
 }
 ```
@@ -52,11 +52,11 @@ fn main() {
 
 ### 3. Modus
 ```rust
-use sciencecalc_rs::matematika::Statistika;
+use sciencecalc_rs::matematika::statistika;
 
 fn main() {
     let data = [2, 4, 4, 5, 5, 5, 2, 2];
-    let modus = Statistika::modus(&data);
+    let modus = statistika::modus(&data);
     println!("Modus: {:?}", modus); // Output: Modus: [2, 5]
 }
 ```
@@ -65,11 +65,11 @@ fn main() {
 
 ### 4. Varian
 ```rust
-use sciencecalc_rs::matematika::Statistika;
+use sciencecalc_rs::matematika::statistika;
 
 fn main() {
     let data = [2.0, 4.0, 4.0, 4.0, 5.0, 5.0, 7.0, 9.0];
-    let varian = Statistika::varian(&data);
+    let varian = statistika::varian(&data);
     println!("Varian: {:.2}", varian); // Output: Varian: 4.00
 }
 ```
@@ -78,11 +78,11 @@ fn main() {
 
 ### 5. Standar Deviasi
 ```rust
-use sciencecalc_rs::matematika::Statistika;
+use sciencecalc_rs::matematika::statistika;
 
 fn main() {
     let data = [2.0, 4.0, 4.0, 4.0, 5.0, 5.0, 7.0, 9.0];
-    let stddev = Statistika::standar_deviasi(&data);
+    let stddev = statistika::standar_deviasi(&data);
     println!("Standar Deviasi: {:.2}", stddev); // Output: Standar Deviasi: 2.00
 }
 ```

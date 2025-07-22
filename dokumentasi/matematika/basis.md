@@ -22,7 +22,7 @@ pub fn basis(num: u64, base: u32) -> String;
 
 #### Contoh Penggunaan
 ```rust
-use sciencecalc_rs::matematika::basis::basis;
+use sciencecalc_rs::matematika::basis;
 
 fn main() {
     let hasil = basis(255, 16);

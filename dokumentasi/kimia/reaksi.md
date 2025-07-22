@@ -18,7 +18,7 @@ Modul [`reaksi.rs`](../src/kimia/reaksi.rs) pada pustaka **sciencecalc-rs** meny
 ### 1. Menghitung Massa Produk Reaksi
 
 ```rust
-use sciencecalc_rs::math::reaksi::massa_produk;
+use sciencecalc_rs::kimia::reaksi::massa_produk;
 
 fn main() {
     let jumlah_mol = 2.0;   // mol
@@ -33,7 +33,7 @@ fn main() {
 ### 2. Menghitung Persentase Hasil Reaksi
 
 ```rust
-use sciencecalc_rs::math::reaksi::persen_hasil;
+use sciencecalc_rs::kimia::reaksi::persen_hasil;
 
 fn main() {
     let massa_aktual = 30.0;      // gram

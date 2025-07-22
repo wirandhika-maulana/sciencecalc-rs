@@ -6,11 +6,11 @@ fn main() {
     );
     println!(
         "Aljabar (SPLSV 2x + 3 = 0): {:?}",
-        sciencecalc_rs::matematika::aljabar::splsv(2.0, 3.0)
+        sciencecalc_rs::matematika::Aljabar::splsv(2.0, 3.0)
     );
     println!(
         "Statistika (Mean [1,2,3]): {}",
-        sciencecalc_rs::matematika::statistika::Statistika::mean(&[1.0, 2.0, 3.0])
+        sciencecalc_rs::matematika::Statistika::mean(&[1.0, 2.0, 3.0])
     );
 
     // FISIKA

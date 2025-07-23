@@ -2,11 +2,17 @@
 
 Modul [`statistika.rs`](../src/matematika/statistika.rs) pada pustaka **sciencecalc-rs** menyediakan fungsi-fungsi statistik dasar seperti **mean, median, modus, varian, dan standar deviasi**.
 
+```rust
+use sciencecalc_rs::matematika::statistika::*; (mengambil semua fungsi yang ada di dalam struktur file statistika.rs)
+use sciencecalc_rs::matematika::statistika::Statistika; (bisa langsung mengambil fungsi struktur Statistika)
+```
+Note : Intinya memanggil semua fungsi yang ada di dalam file statistika atau langsung ke fungsi tertentu bisa!
+
 ---
 
 ## Struktur
 
-Seluruh fungsi statistik diakses melalui struktur `statistika`.
+Seluruh fungsi statistik diakses melalui struktur `Statistika`.
 
 ---
 
@@ -30,7 +36,7 @@ use sciencecalc_rs::matematika::statistika::*;
 
 fn main() {
     let data = [3.0, 5.0, 7.0, 9.0];
-    let rataan = statistika::mean(&data);
+    let rataan = Statistika::mean(&data);
     println!("Mean: {:.2}", rataan); // Output: Mean: 6.00
 }
 ```
@@ -43,7 +49,7 @@ use sciencecalc_rs::matematika::statistika::*;
 
 fn main() {
     let mut data = [4.0, 1.0, 7.0, 3.0, 9.0];
-    let med = statistika::median(&mut data);
+    let med = Statistika::median(&mut data);
     println!("Median: {:.2}", med); // Output: Median: 4.00
 }
 ```
@@ -56,7 +62,7 @@ use sciencecalc_rs::matematika::statistika::*;
 
 fn main() {
     let data = [2, 4, 4, 5, 5, 5, 2, 2];
-    let modus = statistika::modus(&data);
+    let modus = Statistika::modus(&data);
     println!("Modus: {:?}", modus); // Output: Modus: [2, 5]
 }
 ```
@@ -69,7 +75,7 @@ use sciencecalc_rs::matematika::statistika::*;
 
 fn main() {
     let data = [2.0, 4.0, 4.0, 4.0, 5.0, 5.0, 7.0, 9.0];
-    let varian = statistika::varian(&data);
+    let varian = Statistika::varian(&data);
     println!("Varian: {:.2}", varian); // Output: Varian: 4.00
 }
 ```
@@ -82,7 +88,7 @@ use sciencecalc_rs::matematika::statistika::*;
 
 fn main() {
     let data = [2.0, 4.0, 4.0, 4.0, 5.0, 5.0, 7.0, 9.0];
-    let stddev = statistika::standar_deviasi(&data);
+    let stddev = Statistika::standar_deviasi(&data);
     println!("Standar Deviasi: {:.2}", stddev); // Output: Standar Deviasi: 2.00
 }
 ```

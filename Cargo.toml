@@ -7,7 +7,7 @@ description = "A calculation toolkit or Library for mathematics, physics, and ch
 license = "MIT"
 repository = "https://github.com/wirandhika-maulana/sciencecalc-rs"
 keywords = ["math", "science", "matematika", "fisika", "kimia"]
-categories = ["science", "education", "mathematics", "matematika", "kimia", "fisika"]
+categories = ["science", "education", "mathematics", "kimia", "fisika"]
 readme = "README.md"
 documentation = "https://docs.rs/sciencecalc-rs"
 

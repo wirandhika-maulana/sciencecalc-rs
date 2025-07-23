@@ -27,7 +27,7 @@ Impor modul aritmetika:
 ```rust
 use sciencecalc_rs::matematika::aritmetika::*; (mengambil semua fungsi yang ada di dalam struktur file aritmetika.rs)
 ```
-Note : Intinya memanggil fungsi ke semua yang ada di dalam file aljabar atau langsung ke fungsi tertentu bisa!
+Note : Intinya memanggil semua fungsi yang ada di dalam file aritmetika atau langsung ke fungsi tertentu bisa!
 
 ---
 

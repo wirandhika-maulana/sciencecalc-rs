@@ -33,28 +33,88 @@ fn main() {
 Untuk mengakses fungsi-fungsi kalkulasi, panggil dengan namespace modul yang bersangkutan:
 
 ```rust
-use sciencecalc_rs::matematika::aljabar;
+use sciencecalc_rs::matematika::aritmetika;
 use sciencecalc_rs::fisika::gaya;
 use sciencecalc_rs::kimia::stoikiometri;
 ```
 
 ### Contoh Penggunaan
 
-#### 1. Matematika: Sistem Persamaan Linear Satu Variabel (SPLSV)
+#### 1. Operasi Aritmetika Dasar
 
 ```rust
-use sciencecalc_rs::matematika::aljabar;
+use sciencecalc_rs::matematika::aritmetika;
 
 fn main() {
-    // SPLSV: ax + b = 0
-    let solusi = aljabar::splsv(2.0, 3.0);
-    println!("Solusi SPLSV (2x + 3 = 0): {:?}", solusi);
+    let x = 100;
+    let y = 5;
+    let z = [5, 6, 8, 125];
+    let hasil = aritmetika::tambah(
+        aritmetika::tambah(
+            aritmetika::tambah(x, y),
+            aritmetika::kali(x, y)
+        ),
+        aritmetika::super_kurang(&z)
+    );
+    println!("{}", hasil);
 }
 ```
 
 **Output:**
 ```sh
-Solusi SPLSV (2x + 3 = 0): Some(-1.5)
+471
+```
+
+#### 2. Matematika: Sistem Persamaan Linear
+
+```rust
+use sciencecalc_rs::matematika::aljabar::*;
+
+fn main() {
+    let a = 6.0; 
+    let b = 12.0;
+    let x = Aljabar::splsv(a, b);
+
+    let a1 = 4.0; let b1 = -3.0; let c1 = 18.0;
+    let a2 = 3.0; let b2 = 1.0; let c2 = 7.0;
+    let hasil = Aljabar::spldv(a1, b1, c1, a2, b2, c2);
+
+    println!("{}\n{:?}", x, hasil.unwrap());
+}
+```
+
+**Output:**
+```sh
+(-2.0)
+(3.0, -2.0)
+```
+#### 3. Konversi Basis Bilangan dan Operasi Aritmetika
+
+```rust
+use sciencecalc_rs::matematika::aritmetika;
+use sciencecalc_rs::matematika::basis;
+
+fn main() {
+    let x: u64 = 680;
+    let y: u64 = 87;
+    let a = basis::konversi_basis(aritmetika::tambah(x, y), 2);
+    let b = basis::desimal_ke_biner(aritmetika::kali(x, y));
+    let c = basis::biner_ke_hexadesimal(
+        &basis::desimal_ke_biner(aritmetika::kurang(x, y))
+    );
+    let d = basis::hexadesimal_ke_oktal(
+        &basis::desimal_ke_hexadesimal(aritmetika::bagi(x, y))
+    );
+    println!("{}\n{}\n{}\n{}", a, b, c, d);
+}
+```
+
+**Output:**
+```sh
+1011111111
+1110011100011000
+251
+7
 ```
 
 #### 2. Fisika: Gaya

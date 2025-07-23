@@ -6,15 +6,18 @@ pub struct aljabar;
 
 impl aljabar {
     // ==================
-    // Helper: Float to Fraction
+    // Helper: Float to Fraction - Mengubah Float ke Pecahan String
     // ==================
     pub fn float_to_fraction(value: f64) -> String {
         if value.is_nan() || value.is_infinite() {
             return "Cannot convert / Tidak dapat dikonversi".to_string();
         }
+        
+        // Menangani nilai bulat
         if value == (value as i64) as f64 {
             return format!("{}/1", value as i64);
         }
+        // Konstanta untuk batas iterasi dan presisi
         const MAX_ITER: usize = 30;
         const EPS: f64 = 1e-10;
 

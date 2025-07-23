@@ -2,9 +2,9 @@
 /// Fitur: Faktorial, Kombinasi, Permutasi, Sistem Persamaan Linear, Kuadrat, Matriks
 /// Features: Factorial, Combination, Permutation, Linear & Quadratic System, Matrix Operations
 
-pub struct aljabar;
+pub struct Aljabar;
 
-impl aljabar {
+impl Aljabar {
     // ==================
     // Helper: Float to Fraction - Mengubah Float ke Pecahan String
     // ==================

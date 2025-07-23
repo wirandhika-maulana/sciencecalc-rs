@@ -6,7 +6,7 @@ pub mod aljabar;         // Aljabar / Algebra
 pub mod geometri;        // Geometri / Geometry
 pub mod statistika;      // Statistika / Statistics
 pub mod kombinatorika;    // Kombinatorik & Peluang / Combinatorics & Probability
-pub mod basis;  // Konversi basis bilangan / Number base conversion
+pub mod basis;           // Konversi basis bilangan / Number base conversion
 
 // Re-export semua modul utama agar bisa diakses langsung dari math::...
 // Re-export all main modules for direct access via math::...

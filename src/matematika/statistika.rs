@@ -4,9 +4,9 @@
 
 use std::collections::HashMap;
 
-pub struct statistika;
+pub struct Statistika;
 
-impl statistika {
+impl Statistika {
     /// Menghitung rata-rata (mean)
     pub fn mean(data: &[f64]) -> f64 {
         if data.is_empty() {

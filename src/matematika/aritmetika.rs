@@ -3,6 +3,7 @@ use std::ops::*;
 
 /// Trait untuk nilai identitas nol (Zero)
 /// Trait for zero identity value
+/// Normal (hanya dua angka) ///
 pub trait Zero { fn zero() -> Self; }
 
 impl Zero for u32 { fn zero() -> Self { 0 } }
@@ -25,6 +26,7 @@ impl One for f64 { fn one() -> Self { 1.0 } }
 
 /// Fungsi untuk pangkat (eksponen) bilangan bulat
 /// Exponentiation function for integer exponent
+/// Jika exp == 0, maka akan mengembalikan nilai identitas (1).
 pub fn pangkat<T>(base: T, exp: u32) -> T
 where T: Mul<Output = T> + Copy + One,
 {
@@ -65,8 +67,10 @@ pub fn modulo<T: Rem<Output = T>>(a: T, b: T) -> T { a % b }
 /// Membulatkan bilangan ke atas/bawah terdekat
 /// Rounding a number to the nearest integer (up/down)
 pub fn bulat(a: f64) -> f64 {
+    
     let terpotong = a as i64;
     let pecahan = a - terpotong as f64;
+    
     if a >= 0.0 {
         if pecahan >= 0.5 { (terpotong + 1) as f64 }
         else { terpotong as f64 }

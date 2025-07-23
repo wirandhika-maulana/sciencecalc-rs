@@ -282,7 +282,7 @@ Dokumentasi modul [`aljabar`](../src/matematika/aljabar.rs).
 ```rust
 struct Aljabar;
 
-Aljabar::quadratic(a: f64, b: f64, c: f64) -> Option<(f64, f64)>
+Aljabar::kuadrat(a: f64, b: f64, c: f64) -> Option<(f64, f64)>
 ```
 
 Misalkan terdapat persamaan kuadrat:
@@ -300,7 +300,7 @@ Penyelesaiannya menggunakan rumus diskriminan:
 use sciencecalc_rs::matematika::aljabar::*;
 
 fn main() {
-    let akar = Aljabar::quadratic(1.0, -3.0, 2.0);
+    let akar = Aljabar::kuadrat(1.0, -3.0, 2.0);
     println!("{:?}", akar.unwrap());
     // Output: (2.0, 1.0)
 }
@@ -308,7 +308,7 @@ fn main() {
 
 #### Proses Penyelesaian Persamaan Kuadrat
 
-1. Fungsi `quadratic(a, b, c)` menerima tiga parameter, yaitu koefisien a, b, dan c.
+1. Fungsi `kuadrat(a, b, c)` menerima tiga parameter, yaitu koefisien a, b, dan c.
 2. Hitung diskriminan:  
    ```rust
    let discriminant = b * b - 4.0 * a * c;
@@ -361,7 +361,7 @@ fn main() {
 ```rust
 struct Aljabar;
 
-Aljabar::multiply_2x2(m1: [[f64; 2]; 2], m2: [[f64; 2]; 2]) -> [[f64; 2]; 2]
+Aljabar::matriks_2x2(m1: [[f64; 2]; 2], m2: [[f64; 2]; 2]) -> [[f64; 2]; 2]
 ```
 
 #### Implementasi dalam Kode
@@ -372,7 +372,7 @@ use sciencecalc_rs::matematika::aljabar::*;
 fn main() {
     let a = [[1.0, 2.0], [3.0, 4.0]];
     let b = [[2.0, 0.0], [1.0, 2.0]];
-    let hasil = Aljabar::multiply_2x2(a, b);
+    let hasil = Aljabar::matriks_2x2(a, b);
     println!("{:?}", hasil); // Output: [[4.0, 4.0], [10.0, 8.0]]
 }
 ```
@@ -438,7 +438,7 @@ fn main() {
 ```rust
 struct Aljabar;
 
-Aljabar::multiply_3x3(a: [[f64; 3]; 3], b: [[f64; 3]; 3]) -> [[f64; 3]; 3]
+Aljabar::matriks_3x3(a: [[f64; 3]; 3], b: [[f64; 3]; 3]) -> [[f64; 3]; 3]
 ```
 
 #### Implementasi dalam Kode
@@ -457,7 +457,7 @@ fn main() {
         [6.0, 5.0, 4.0],
         [3.0, 2.0, 1.0]
     ];
-    let hasil = Aljabar::multiply_3x3(a, b);
+    let hasil = Aljabar::matriks_3x3(a, b);
     println!("{:?}", hasil);
 }
 ```

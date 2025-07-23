@@ -1,6 +1,10 @@
 # Kombinatorika
 
 Dokumentasi modul [`kombinatorika.rs`](../src/matematika/kombinatorika.rs) pada pustaka **sciencecalc-rs**.
+```rust
+use sciencecalc_rs::matematika::kombinatorika::*; (mengambil semua fungsi yang ada di dalam struktur file kombinatorika.rs)
+```
+Note : Intinya memanggil semua fungsi yang ada di dalam file kombinatorika atau langsung ke fungsi tertentu bisa!
 
 ---
 

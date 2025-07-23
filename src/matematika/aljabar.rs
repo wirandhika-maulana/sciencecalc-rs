@@ -6,24 +6,6 @@ pub struct aljabar;
 
 impl aljabar {
     // ==================
-    // Kombinatorika Dasar / Basic Combinatorics
-    // ==================
-    /// Faktorial (n!) - Factorial
-    pub fn factorial(n: u64) -> u64 {
-        (1..=n).product()
-    }
-
-    /// Kombinasi (nCr) - Combination
-    pub fn combination(n: u64, r: u64) -> u64 {
-        Self::factorial(n) / (Self::factorial(r) * Self::factorial(n - r))
-    }
-
-    /// Permutasi (nPr) - Permutation
-    pub fn permutation(n: u64, r: u64) -> u64 {
-        Self::factorial(n) / Self::factorial(n - r)
-    }
-
-    // ==================
     // Helper: Float to Fraction
     // ==================
     pub fn float_to_fraction(value: f64) -> String {

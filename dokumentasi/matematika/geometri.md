@@ -6,7 +6,7 @@ Modul ini menyediakan berbagai struktur dan metode untuk menghitung luas, kelili
 ```rust
 use sciencecalc_rs::matematika::geometri::*; (mengambil semua fungsi yang ada di dalam struktur file geometri.rs)
 ```
-Note : Intinya memanggil fungsi ke semua yang ada di dalam file aljabar atau langsung ke fungsi tertentu bisa!
+Note : Intinya memanggil semua fungsi yang ada di dalam file geometri atau langsung ke fungsi tertentu bisa!
 
 
 ## Bangun Datar

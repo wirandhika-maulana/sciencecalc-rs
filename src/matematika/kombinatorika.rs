@@ -2,13 +2,15 @@
 
 /// Fungsi faktorial
 /// Factorial function
-pub fn faktorial(n: u64) -> u64 {
+pub fn faktorial(n: u64) -> u64 
+{
     (1..=n).product()
 }
 
 /// Fungsi kombinasi (tanpa pengulangan)
 /// Combination function (without repetition)
-pub fn kombinasi(n: u64, k: u64) -> u64 {
+pub fn kombinasi(n: u64, k: u64) -> u64 
+{
     if k > n { return 0; }
     faktorial(n) / (faktorial(k) * faktorial(n - k))
 }
@@ -16,7 +18,8 @@ pub fn kombinasi(n: u64, k: u64) -> u64 {
 /// Fungsi permutasi (tanpa pengulangan)
 /// Permutation function (without repetition)
 /// P(n, r) = n! / (n - r)!
-pub fn permutasi(n: u64, r: u64) -> u64 {
+pub fn permutasi(n: u64, r: u64) -> u64 
+{
     if r > n {
         panic!("r tidak boleh lebih besar dari n"); // r must not be greater than n
     }
@@ -26,14 +29,16 @@ pub fn permutasi(n: u64, r: u64) -> u64 {
 /// Kombinasi dengan pengulangan
 /// Combination with repetition
 /// C'(n, r) = (n + r - 1)! / (r! * (n - 1)!)
-pub fn kombinasi_perulangan(n: u64, r: u64) -> u64 {
+pub fn kombinasi_perulangan(n: u64, r: u64) -> u64 
+{
     faktorial(n + r - 1) / (faktorial(r) * faktorial(n - 1))
 }
 
 /// Permutasi dengan pengulangan
 /// Permutation with repetition
 /// P(n; n1, n2, ..., nk) = n! / (n1! * n2! * ... * nk!)
-pub fn permutasi_perulangan(n: u64, pengulangan: &[u64]) -> u64 {
+pub fn permutasi_perulangan(n: u64, pengulangan: &[u64]) -> u64 
+{
     let pembilang = faktorial(n);
     let penyebut: u64 = pengulangan.iter().map(|&x| faktorial(x)).product();
     pembilang / penyebut

@@ -31,7 +31,7 @@ fn main() {
 ```
 
 Output:
-```
+```yaml
 Faktorial dari 5 adalah: 120
 Kombinasi C(5, 2) adalah: 10
 Permutasi P(5, 2) adalah: 20

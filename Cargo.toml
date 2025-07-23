@@ -6,8 +6,8 @@ authors = ["Wirandhika Maulana Akbar <randikacreator22@gmail.com>"]
 description = "A calculation toolkit or Library for mathematics, physics, and chemistry in Rust | Library rust Matematika, Fisika, Kimia - Kalkulator Toolkit"
 license = "MIT"
 repository = "https://github.com/wirandhika-maulana/sciencecalc-rs"
-keywords = ["math", "science", "matematika", "fisika", "kimia"]
-categories = ["science", "education", "mathematics", "kimia", "fisika"]
+keywords = ["math", "science", "calculator", "physics", "chemistry"]
+categories = ["science", "physics", "mathematics", "calculator", "chemistry"]
 readme = "README.md"
 documentation = "https://docs.rs/sciencecalc-rs"
 

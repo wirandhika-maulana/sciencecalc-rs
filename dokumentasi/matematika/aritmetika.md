@@ -168,6 +168,8 @@ Struktur & metode untuk menghitung dan memeriksa deret Fibonacci.
 
 **Contoh:**
 ```rust
+use sciencecalc_rs::matematika::aritmetika::*;
+
 fn main() {
     println!("{}", Fibonacci::rekursif(6));           // 8
     println!("{}", Fibonacci::iteratif(10));          // 55

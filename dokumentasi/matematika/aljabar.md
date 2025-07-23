@@ -26,7 +26,7 @@ Penyelesaiannya menggunakan rumus:
 #### Implementasi dalam Kode
 
 ```rust
-use sciencecalc_rs::matematika::aljabar;
+use sciencecalc_rs::matematika::aljabar::*;
 
 fn main() {
     let x = Aljabar::splsv(6.0, 12.0);  // x = -b / a

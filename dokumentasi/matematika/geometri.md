@@ -2,11 +2,12 @@
 
 Modul ini menyediakan berbagai struktur dan metode untuk menghitung luas, keliling, volume, dan properti lain dari bangun datar serta bangun ruang dalam bahasa Rust.
 
+## Penggunaan
 ```rust
 use sciencecalc_rs::matematika::geometri::*; (mengambil semua fungsi yang ada di dalam struktur file geometri.rs)
 ```
 Note : Intinya memanggil fungsi ke semua yang ada di dalam file aljabar atau langsung ke fungsi tertentu bisa!
----
+
 
 ## Bangun Datar
 

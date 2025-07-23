@@ -5,7 +5,7 @@ Dokumentasi modul [`aljabar`](../src/matematika/aljabar.rs).
 ```rust
 use sciencecalc_rs::matematika::aljabar::*; (mengambil semua fungsi yang ada di dalam struktur file aljabar.rs)
 ```
-Note : Intinya memanggil fungsi ke semua yang ada di dalam file aljabar atau langsung ke fungsi tertentu bisa!
+Note : Intinya memanggil semua fungsi yang ada di dalam file aljabar atau langsung ke fungsi tertentu bisa!
 
 ## Sistem Persamaan Linear
 

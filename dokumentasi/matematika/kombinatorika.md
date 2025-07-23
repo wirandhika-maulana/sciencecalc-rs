@@ -107,7 +107,7 @@ Mewakili kantong kelereng dengan dua warna (Merah = 'M', Putih = 'P').
 
 **Contoh:**
 ```rust
-use sciencecalc_rs::matematika::kombinatorika::Peluang::KantongKelereng;
+use sciencecalc_rs::matematika::kombinatorika::Peluang::*;
 
 fn main() {
     let kantong = KantongKelereng::new(5, 7);

@@ -11,7 +11,7 @@ Modul [**Konversi Basis**](../src/matematika/basis.rs) pada pustaka **sciencecal
 use sciencecalc_rs::matematika::basis::*; (mengambil semua fungsi yang ada di dalam struktur file basis.rs)
 use sciencecalc_rs::matematika::basis::biner_ke_desimal; (mengambil fungsi biner_ke_desimal saja)
 ```
-Note : Intinya memanggil fungsi ke semua yang ada di dalam file basis atau langsung ke fungsi tertentu bisa!
+Note : Intinya memanggil semua fungsi yang ada di dalam file basis atau langsung ke fungsi tertentu bisa!
 
 #### Deskripsi
 Fungsi untuk mengonversi angka desimal ke basis lain (2–36).

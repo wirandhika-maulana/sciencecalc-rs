@@ -462,7 +462,7 @@ pub fn inverse_3x3(m: [[f64; 3]; 3]) -> Option<[[f64; 3]; 3]> {
     let mut cof = [[0.0; 3]; 3];
     for i in 0..3 {
         for j in 0..3 {
-            let submat = |x: usize, y: usize| -> f64 {
+            let submat = |_x: usize, _y: usize| -> f64 {
                 let mut vals = vec![];
                 for r in 0..3 {
                     for c in 0..3 {

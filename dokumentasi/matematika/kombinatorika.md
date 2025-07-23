@@ -50,14 +50,14 @@ Mewakili dadu standar (angka 1-6) dan peluangnya.
 | Struktur  | Metode                 | Parameter         | Return  | Deskripsi                                           |
 |-----------|------------------------|-------------------|---------|-----------------------------------------------------|
 | `Dadu`    | `new()`                | -                 | Dadu    | Membuat objek dadu baru dengan angka 1-6            |
-|           | `muncul_angka(target)` | `target: i64`     | f64     | Peluang muncul angka tertentu                       |
-|           | `muncul_genap()`       | -                 | f64     | Peluang muncul angka genap                          |
-|           | `muncul_lebih_dari()`  | `batas: i64`      | f64     | Peluang muncul angka lebih dari batas               |
-|           | `muncul_kurang_dari()` | `batas: i64`      | f64     | Peluang muncul angka kurang dari batas              |
+|           | `muncul_angka(target)` | `target: i64`     | f64     | Menghitung peluang munculnya angka tertentu                       |
+|           | `muncul_genap()`       | -                 | f64     | Menghitung peluang munculnya angka genap                          |
+|           | `muncul_lebih_dari()`  | `batas: i64`      | f64     | Menghitung peluang munculnya angka lebih dari nilai tertentu               |
+|           | `muncul_kurang_dari()` | `batas: i64`      | f64     | Menghitung peluang munculnya angka kurang dari nilai tertentu              |
 
 **Contoh:**
 ```rust
-use sciencecalc_rs::matematika::kombinatorika::Peluang::Dadu;
+use sciencecalc_rs::matematika::kombinatorika::Peluang::*;
 
 fn main() {
     let dadu = Dadu::new();
@@ -76,14 +76,14 @@ Mewakili koin dua sisi (Angka = 'A', Gambar = 'G').
 
 | Struktur  | Metode                       | Parameter                      | Return | Deskripsi                                      |
 |-----------|------------------------------|--------------------------------|--------|------------------------------------------------|
-| `Koin`    | `new()`                      | -                              | Koin   | Membuat objek koin baru                        |
-|           | `muncul(target)`             | `target: char`                 | f64    | Peluang muncul sisi tertentu                   |
-|           | `muncul_beruntun(target, j)` | `target: char, jumlah: u32`    | f64    | Peluang muncul sisi tertentu beruntun          |
-|           | `muncul_setidaknya_satu()`   | `target: char, jumlah: u32`    | f64    | Peluang muncul setidaknya satu sisi tertentu   |
+| `Koin`    | `new()`                      | -                              | Koin   | Membuat objek koin baru dengan sisi 'A' (Angka) dan 'G' (Gambar)                        |
+|           | `muncul(target)`             | `target: char`                 | f64    | Menghitung peluang munculnya sisi tertentu                   |
+|           | `muncul_beruntun(target, j)` | `target: char, jumlah: u32`    | f64    | Menghitung peluang munculnya sisi tertentu secara beruntun          |
+|           | `muncul_setidaknya_satu()`   | `target: char, jumlah: u32`    | f64    | Menghitung peluang munculnya angka kurang dari nilai tertentu   |
 
 **Contoh:**
 ```rust
-use sciencecalc_rs::matematika::kombinatorika::Peluang::Koin;
+use sciencecalc_rs::matematika::kombinatorika::Peluang::*;
 
 fn main() {
     let koin = Koin::new();
@@ -101,9 +101,9 @@ Mewakili kantong kelereng dengan dua warna (Merah = 'M', Putih = 'P').
 
 | Struktur           | Metode                         | Parameter                             | Return | Deskripsi                                         |
 |--------------------|--------------------------------|---------------------------------------|--------|---------------------------------------------------|
-| `KantongKelereng`  | `new(merah, putih)`            | merah: u32, putih: u32                | KantongKelereng | Membuat objek kantong kelereng baru          |
-|                    | `muncul_satu(warna)`           | warna: char                           | f64    | Peluang mengambil satu kelereng warna tertentu    |
-|                    | `muncul_dua_berurutan(w1, w2)` | warna_pertama: char, warna_kedua: char| f64    | Peluang dua kelereng warna tertentu berurutan     |
+| `KantongKelereng`  | `new(merah, putih)`            | merah: u32, putih: u32                | KantongKelereng | Membuat objek kantong kelereng dengan jumlah kelereng merah dan putih          |
+|                    | `muncul_satu(warna)`           | warna: char                           | f64    | Menghitung peluang mengambil satu kelereng dengan warna tertentu    |
+|                    | `muncul_dua_berurutan(w1, w2)` | warna_pertama: char, warna_kedua: char| f64    | Menghitung peluang mengambil dua kelereng dengan warna tertentu secara berurutan     |
 
 **Contoh:**
 ```rust
